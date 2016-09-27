@@ -581,7 +581,8 @@ main {
 .Chip-input {
   outline: none;
   background: none;
-  border: none; }
+  border: none;
+  margin-bottom: 5px; }
 
 .Chip {
   display: inline-flex;
