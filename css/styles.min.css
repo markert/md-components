@@ -573,6 +573,34 @@ main {
   fill: rgba(0, 0, 0, 0.26);
   color: rgba(0, 0, 0, 0.26); }
 
+/**
+ * focus
+ */
+.Checkbox-focus {
+  position: absolute;
+  /* 48px - 18px = 30px / 2 = 15px */
+  top: 15px;
+  left: 13px;
+  /* use the same width as svg path element for checkbox icon */
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.15s ease; }
+  @media (min-width: 768px) {
+    .Checkbox-focus {
+      left: 8px; } }
+
+.Checkbox-input:checked.Checkbox-input--keyboard ~ .Checkbox-focus {
+  box-shadow: 0 0 0 8px rgba(27, 50, 95, 0.12);
+  background-color: rgba(27, 50, 95, 0.12);
+  display: block; }
+
+.Checkbox-input:not(:checked).Checkbox-input--keyboard ~ .Checkbox-focus {
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.12);
+  display: block; }
+
 .Chip-wrapper {
   cursor: text;
   display: flex;
