@@ -424,20 +424,14 @@ body {
 
 main {
   flex: 1;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 2px;
-  padding-bottom: 10px;
+  padding: 2px 10px 10px;
   font-size: 13px; }
   @media (min-width: 768px) {
     main {
       /**
      * Cards have a margin of 8px => left = 40px and top = 20px
      */
-      padding-right: 0;
-      padding-left: 0;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding: 20px 0;
       width: 750px;
       margin-left: auto;
       margin-right: auto; } }
@@ -494,7 +488,7 @@ main {
 
 .Card-title {
   font-size: 24px;
-  padding: 24px 16px 16px 16px; }
+  padding: 24px 16px 16px; }
 
 .Card-actions {
   padding: 8px; }
@@ -624,7 +618,8 @@ main {
   margin-bottom: 5px;
   cursor: default; }
 
-.Chip:focus, .Chip:hover {
+.Chip:focus,
+.Chip:hover {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.54);
   outline: none; }
@@ -639,7 +634,8 @@ main {
 .Chip svg {
   fill: rgba(0, 0, 0, 0.26); }
 
-.Chip:focus svg, .Chip:hover svg {
+.Chip:focus svg,
+.Chip:hover svg {
   fill: #fff; }
 
 .Chip-icon {
@@ -734,7 +730,7 @@ header.Header--shadow {
  */
 .List {
   padding: 8px 0;
-  margin: 0 0;
+  margin: 0;
   list-style: none;
   background-color: white; }
 
@@ -744,31 +740,36 @@ header.Header--shadow {
 
 .List-row-text-primary {
   font-size: 16px;
-  margin: 0 0;
+  margin: 0;
   margin-bottom: 6px;
   font-weight: normal;
-  padding: 0 0; }
+  padding: 0; }
 
 .List-row--oneline .List-row-text-primary {
-  margin-bottom: 0px; }
+  margin-bottom: 0; }
 
-.List-row--islink:focus, .List-row--selectable:hover, .List-row--islink:hover {
+.List-row--islink:focus,
+.List-row--selectable:hover,
+.List-row--islink:hover {
   background-color: #f5f5f5;
   transition: background-color 0.3s ease;
   outline: none; }
 
-.List-row--islink, .List-row--selectable {
+.List-row--islink,
+.List-row--selectable {
   cursor: pointer; }
 
-.List-row:not(.List-row--islink):focus, .List-row--islink.active {
+.List-row:not(.List-row--islink):focus,
+.List-row--islink.active {
   background-color: #e9e9e9;
   outline: none; }
 
-.List-row-text-secondary, .List-row-text-subheader {
+.List-row-text-secondary,
+.List-row-text-subheader {
   font-size: 14px;
   font-weight: normal;
-  padding: 0 0;
-  margin: 0 0;
+  padding: 0;
+  margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   display: inline-block;
@@ -802,7 +803,9 @@ header.Header--shadow {
       padding-left: 24px;
       padding-right: 24px; } }
 
-.List-row-icon-left, .List-row-icon-right, .List-row-avatar {
+.List-row-icon-left,
+.List-row-icon-right,
+.List-row-avatar {
   flex-shrink: 0;
   width: 56px; }
 
@@ -886,7 +889,8 @@ header.Header--shadow {
 /**
  * CSS variables
  */
-.Modal-overlay.is-visible, .Modal.is-visible {
+.Modal-overlay.is-visible,
+.Modal.is-visible {
   opacity: 1;
   pointer-events: initial; }
 
@@ -931,7 +935,7 @@ header.Header--shadow {
   padding: 24px; }
 
 .Modal-header {
-  color: #0D0D0D;
+  color: #0d0d0d;
   font-size: 20px;
   margin-bottom: 20px; }
 
@@ -993,7 +997,7 @@ nav.is-visible {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding: 12px 0 10px 0; }
+  padding: 12px 0 10px; }
 
 .Navigation-link {
   display: block;
@@ -1102,7 +1106,8 @@ nav.is-visible {
   fill: rgba(0, 0, 0, 0.54);
   transition: all 0.15s ease; }
 
-.RadioButton--keyboard .RadioButton-input:checked ~ .RadioButton-icon, .RadioButton-item--keyboard .RadioButton-icon {
+.RadioButton--keyboard .RadioButton-input:checked ~ .RadioButton-icon,
+.RadioButton-item--keyboard .RadioButton-icon {
   box-shadow: 0 0 0 8px rgba(27, 50, 95, 0.12);
   border-radius: 100%;
   background-color: rgba(27, 50, 95, 0.12); }
@@ -1138,7 +1143,7 @@ nav.is-visible {
 
 .Select-label {
   font-size: 12px;
-  padding: 0 0 8px 0;
+  padding: 0 0 8px;
   color: rgba(27, 50, 95, 0.6); }
 
 /**
@@ -1173,7 +1178,6 @@ nav.is-visible {
  */
 .Select-list {
   margin: 0;
-  padding: 0;
   z-index: 1;
   position: absolute;
   left: -16px;
@@ -1239,12 +1243,6 @@ nav.is-visible {
   height: 2px;
   background: #1b325f; }
 
-/*.Slider-input:focus ~ .Slider-track .Slider-thumb {
-  animation: click-jump 0.5s ease;
-}*/
-/*.Slider-track-on.is-animating {
-  transition: width 0.5s ease;
-}*/
 .Slider-thumb {
   pointer-events: none;
   position: absolute;
@@ -1256,29 +1254,13 @@ nav.is-visible {
   border: 2px solid transparent; }
 
 .Slider-thumb.is-mouseDown {
-  transition: left 0.5s;
-  /*transform: scale(1.25);
-  animation: click-jump 0.5s;*/ }
+  transition: left 0.5s; }
 
-/*.Slider-thumb.is-clicking {
-  transform: scale(1.25);
-  transition: left 0.5s ease;
-  animation: click-jump 0.5s ease;
-}*/
 .Slider-thumb.is-zero {
   transition: border 0.5s, background 0.5s;
   background: #fff;
   border-color: rgba(0, 0, 0, 0.26); }
 
-/*.Slider-thumb.is-dragging {
-  transform: scale(1.25);
-}*/
-/*.Slider-thumb.is-click-jumping.is-zero {
-  transition: left 0.5s, background 0.25s 0.25s, border 0.25s 0.25s;
-  background: #fff;
-  border-color: rgba(0, 0, 0, 0.26);
-  animation: click-jump 0.5s ease;
-}*/
 @keyframes click-jump {
   0% {
     transform: scale(1); }
@@ -1345,7 +1327,7 @@ nav.is-visible {
   border: none;
   margin: 0 0 0 24px;
   padding: 0;
-  color: #42A5F5;
+  color: #42a5f5;
   outline: none; }
 
 /**
@@ -1378,7 +1360,7 @@ nav.is-visible {
   height: 20px;
   border-radius: 50%;
   background: #fafafa;
-  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   transition: 0.15s ease; }
 
 /**
@@ -1407,7 +1389,7 @@ nav.is-visible {
   background: rgba(0, 0, 0, 0.12); }
 
 .Switch-input:disabled ~ .Switch-track .Switch-thumb {
-  background: #BDBDBD; }
+  background: #bdbdbd; }
 
 /**
  * http://www.google.com/design/spec/components/tabs.html#tabs-specs
@@ -1476,7 +1458,7 @@ nav.is-visible {
   margin-top: 22px; }
 
 .Textfield--nolabel .Textfield-icon {
-  margin-top: 0px; }
+  margin-top: 0; }
 
 .Textfield-label {
   order: 1;
