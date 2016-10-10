@@ -21,6 +21,7 @@ import SparklineRoute from './components/sparklineRoute'
 import SwitchRoute from './components/switchRoute'
 import TabsRoute from './components/tabsRoute'
 import TextfieldRoute from './components/textfieldRoute'
+import TextareaRoute from './components/textareaRoute'
 import TooltipRoute from './components/tooltipRoute'
 
 // required for tabs component demo
@@ -79,6 +80,7 @@ ReactDOM.render((
         <Route path='sweden' component={Sweden} />
       </Route>
       <Route path='textfield' component={TextfieldRoute} />
+      <Route path='textarea' component={TextareaRoute} />
       <Route path='tooltip' component={TooltipRoute} />
     </Route>
   </Router>
