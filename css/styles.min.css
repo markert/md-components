@@ -995,28 +995,23 @@ main {
   border-radius: 2px;
   outline: none;
   color: #1b325f;
-  font-weight: 500; }
-
-.Button:hover,
-.Button:focus {
-  background: rgba(153, 153, 153, 0.2); }
-
-.Button:active {
-  background: rgba(153, 153, 153, 0.4); }
-
-.Button:disabled {
-  color: rgba(0, 0, 0, 0.4);
-  background: none; }
-
-/* http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons */
-.Button--raised {
-  background: rgba(153, 153, 153, 0.2);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.26);
-  transition: 0.25s; }
-
-.Button--raised:active {
-  background: rgba(153, 153, 153, 0.2);
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3); }
+  font-weight: 500;
+  /* http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons */ }
+  .Button:hover, .Button:focus {
+    background: rgba(153, 153, 153, 0.2); }
+  .Button:active {
+    background: rgba(153, 153, 153, 0.4); }
+  .Button:disabled {
+    color: rgba(0, 0, 0, 0.4);
+    background: none; }
+  .Button--raised {
+    background: rgba(153, 153, 153, 0.2);
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.26);
+    transition: box-shadow 0.25s;
+    will-change: box-shadow; }
+    .Button--raised:active {
+      background: rgba(153, 153, 153, 0.2);
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3); }
 
 /**
  * http://www.google.com/design/spec/components/cards.html#cards-usage
@@ -2335,7 +2330,7 @@ section {
 main h2 {
   font-size: 3rem;
   line-height: 110%;
-  margin: 1.5rem 0 1.2rem 0;
+  margin: 1.5rem 0 1.2rem;
   color: #1b325f; }
 
 .Chip-example1 {
@@ -2372,18 +2367,18 @@ main h2 {
 
 .playground {
   margin: 10px auto;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column; }
 
 .playgroundToggleCodeBar {
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   background-color: #1b325f;
   color: #fff;
   order: 1; }
 
 .playgroundCode {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   order: 2; }
 
 .playground.collapsableCode .playgroundCode {
@@ -2393,14 +2388,15 @@ main h2 {
 .playground.collapsableCode .playgroundCode.expandedCode {
   height: auto; }
 
-.playgroundToggleCodeLink, .playgroundToggleCodeLink::before {
+.playgroundToggleCodeLink,
+.playgroundToggleCodeLink::before {
   cursor: pointer;
   position: relative;
   right: 0;
   display: inline-block; }
 
 .playgroundToggleCodeLink::before {
-  padding: 5px 5px 5px 0px; }
+  padding: 5px 5px 5px 0; }
 
 .playgroundToggleCodeLink {
   padding: 5px 10px 5px 5px; }
@@ -2419,7 +2415,7 @@ main h2 {
   padding: 10px;
   font-size: 12px;
   color: white;
-  background: #F2777A; }
+  background: #f2777a; }
 
 #react main.home {
   margin-top: -20px;
@@ -2442,7 +2438,7 @@ main h2 {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
   margin-bottom: 12px; }
   .Home .Hero-logo h1 {
-    margin: 0 0; }
+    margin: 0; }
   .Home .Hero-logo span {
     padding: 20px 15px;
     font-size: 30px; }
@@ -2462,18 +2458,20 @@ main h2 {
     font-weight: normal;
     color: #1b325f; }
 
-.Hero-tagline, .Hero-links {
+.Hero-tagline,
+.Hero-links {
   font-size: 16px;
   line-height: 22px;
   margin-top: 40px; }
   @media (min-width: 768px) {
-    .Hero-tagline, .Hero-links {
+    .Hero-tagline,
+    .Hero-links {
       margin-top: 60px;
       font-size: 20px; } }
 
 .Hero-sponsor {
   font-weight: normal;
-  margin: 0 0;
+  margin: 0;
   display: flex; }
   .Hero-sponsor svg {
     width: 20px;
