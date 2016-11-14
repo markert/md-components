@@ -1000,23 +1000,33 @@ main {
   text-transform: uppercase;
   border-radius: 2px;
   outline: none;
-  color: #1b325f;
+  color: #e91e63;
   font-weight: 500;
+  will-change: background;
+  transition: background 0.25s;
   /* http://www.google.com/design/spec/components/buttons.html#buttons-flat-raised-buttons */ }
   .Button:hover, .Button:focus {
-    background: rgba(153, 153, 153, 0.2); }
+    background: rgba(233, 30, 99, 0.12); }
   .Button:active {
-    background: rgba(153, 153, 153, 0.4); }
+    background: rgba(233, 30, 99, 0.24); }
   .Button:disabled {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(233, 30, 99, 0.5);
     background: none; }
+  .Button--filled {
+    color: #fff;
+    background: #e91e63; }
+    .Button--filled:disabled {
+      color: rgba(255, 255, 255, 0.5);
+      background: #ce064a; }
+    .Button--filled:hover, .Button--filled:focus {
+      background: #b8124a; }
+    .Button--filled:active {
+      background: #9c0f3f; }
   .Button--raised {
-    background: rgba(153, 153, 153, 0.2);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.26);
-    transition: box-shadow 0.25s;
-    will-change: box-shadow; }
+    transition: background 0.25s, box-shadow 0.25s;
+    will-change: background, box-shadow; }
     .Button--raised:active {
-      background: rgba(153, 153, 153, 0.2);
       box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3); }
 
 /**
@@ -2120,14 +2130,14 @@ nav.is-visible {
   height: 20px;
   border-radius: 50%;
   background: #fafafa;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
   transition: 0.15s ease; }
 
 /**
  * focus
  */
 .Switch-input:checked.Switch-input:focus ~ .Switch-track .Switch-thumb {
-  box-shadow: 0 0 0 15px rgba(27, 50, 95, 0.12); }
+  box-shadow: 0 0 0 15px rgba(248, 187, 208, 0.5); }
 
 .Switch-input:not(:checked).Switch-input:focus ~ .Switch-track .Switch-thumb {
   box-shadow: 0 0 0 15px rgba(0, 0, 0, 0.12); }
@@ -2136,11 +2146,11 @@ nav.is-visible {
  * checked
  */
 .Switch-input:checked ~ .Switch-track {
-  background: rgba(27, 50, 95, 0.5); }
+  background: #f8bbd0; }
 
 .Switch-input:checked ~ .Switch-track .Switch-thumb {
   left: 16px;
-  background: #1b325f; }
+  background: #e91e63; }
 
 /**
  * disabled
