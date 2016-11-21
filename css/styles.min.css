@@ -2161,6 +2161,76 @@ nav.is-visible {
 .Switch-input:disabled ~ .Switch-track .Switch-thumb {
   background: #bdbdbd; }
 
+.Table {
+  width: 100%; }
+  .Table-head {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px; }
+    .Table-head-row {
+      height: 56px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      .Table-head-row-cell {
+        padding: 0 28px; }
+        .Table-head-row-cell:first-child {
+          padding-left: 24px; }
+        .Table-head-row-cell:last-child {
+          padding-right: 24px; }
+        .Table-head-row-cell--align-left {
+          text-align: left; }
+        .Table-head-row-cell--align-right {
+          text-align: right; }
+        .Table-head-row-cell-sorter {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          justify-content: flex-end;
+          color: rgba(0, 0, 0, 0.87); }
+          .Table-head-row-cell-sorter-arrow {
+            fill: rgba(0, 0, 0, 0.87);
+            transition: transform 0.15s ease-in-out;
+            margin-right: 5px; }
+            .Table-head-row-cell-sorter-arrow--ascending {
+              transform: rotate3d(0, 0, 1, 0deg); }
+            .Table-head-row-cell-sorter-arrow--descending {
+              transform: rotate3d(0, 0, 1, 180deg); }
+  .Table-body {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.87); }
+    .Table-body-row {
+      height: 48px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+      .Table-body-row:hover {
+        background-color: #eee; }
+      .Table-body-row-cell {
+        padding: 0 28px; }
+        .Table-body-row-cell:first-child {
+          padding-left: 24px; }
+        .Table-body-row-cell:last-child {
+          padding-right: 24px; }
+        .Table-body-row-cell--align-left {
+          text-align: left; }
+        .Table-body-row-cell--align-right {
+          text-align: right; }
+  .Table-footer {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54); }
+    .Table-footer .Select {
+      font-size: 12px;
+      flex: none;
+      color: rgba(0, 0, 0, 0.54);
+      margin-right: 32px; }
+      .Table-footer .Select-body {
+        border-bottom: none;
+        padding-bottom: 5px; }
+    .Table-footer-xOfY {
+      margin-right: 32px; }
+    .Table-footer-rowsPerPage {
+      margin-right: 40px; }
+
 /**
  * http://www.google.com/design/spec/components/tabs.html#tabs-specs
  */
