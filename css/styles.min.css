@@ -2554,3 +2554,14 @@ main h2 {
     height: 20px;
     margin-left: 6px;
     margin-top: -2px; }
+
+.HeaderRoute header {
+  position: relative;
+  z-index: 100; }
+
+header.custom {
+  background-color: #9c27b0;
+  color: rgba(255, 255, 255, 0.87); }
+
+header.custom .Header-chevron {
+  fill: rgba(255, 255, 255, 0.87); }
