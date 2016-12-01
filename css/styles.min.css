@@ -1713,6 +1713,9 @@ nav.is-visible {
   text-align: left;
   outline: 0; }
 
+.Select-body:disabled {
+  color: rgba(0, 0, 0, 0.38); }
+
 .Select-placeholder {
   color: rgba(0, 0, 0, 0.54); }
 
