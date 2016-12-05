@@ -2178,23 +2178,22 @@ nav.is-visible {
           padding-left: 24px; }
         .Table-head-row-cell:last-child {
           padding-right: 24px; }
-        .Table-head-row-cell--align-left {
-          text-align: left; }
-        .Table-head-row-cell--align-right {
-          text-align: right; }
-        .Table-head-row-cell-sorter {
+        .Table-head-row-cell-button {
+          background: none;
+          border: none;
+          outline: none;
           display: flex;
           align-items: center;
           cursor: pointer;
           justify-content: flex-end;
           color: rgba(0, 0, 0, 0.87); }
-          .Table-head-row-cell-sorter-arrow {
+          .Table-head-row-cell-button-arrow {
             fill: rgba(0, 0, 0, 0.87);
             transition: transform 0.15s ease-in-out;
             margin-right: 5px; }
-            .Table-head-row-cell-sorter-arrow--ascending {
+            .Table-head-row-cell-button-arrow--ascending {
               transform: rotate3d(0, 0, 1, 0deg); }
-            .Table-head-row-cell-sorter-arrow--descending {
+            .Table-head-row-cell-button-arrow--descending {
               transform: rotate3d(0, 0, 1, 180deg); }
   .Table-body {
     font-size: 13px;
@@ -2210,10 +2209,6 @@ nav.is-visible {
           padding-left: 24px; }
         .Table-body-row-cell:last-child {
           padding-right: 24px; }
-        .Table-body-row-cell--align-left {
-          text-align: left; }
-        .Table-body-row-cell--align-right {
-          text-align: right; }
   .Table-footer {
     height: 56px;
     display: flex;
