@@ -2396,7 +2396,11 @@ nav.is-visible {
   display: flex;
   align-items: center;
   pointer-events: none;
-  transform-origin: center top; }
+  transform-origin: center top;
+  opacity: 0; }
+  .Tooltip.is-active {
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out; }
 
 section {
   margin-bottom: 50px; }
