@@ -2374,7 +2374,6 @@ nav.is-visible {
   flex-wrap: nowrap;
   justify-content: space-between;
   font-size: 12px;
-  margin-top: 6px;
   min-height: 16px; }
 
 .Textfield-error {
